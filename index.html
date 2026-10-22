@@ -1,0 +1,697 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>鉄板焼肉じゅうじゅう亭</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="広島市佐伯区・五日市の鉄板焼肉じゅうじゅう亭。熱々の鉄板でお肉とキャベツを、辛味噌を溶かしてご飯にのせて。焼肉1枚900円〜、ご飯250円・おかわり無料、テイクアウトの得々セットあり。">
+<meta property="og:title" content="鉄板焼肉じゅうじゅう亭｜広島市佐伯区・五日市 ご飯が進む鉄板焼肉とテイクアウト">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+
+<!--
+  公式Instagram（2026年10月）の情報で更新済み。まだ確認が必要な項目:
+  1. 電話番号と住所: 公式Instagramは 080-9125-3165 / 石内6626-1。Googleマップは 082-909-2404 で、住所は同じ（石内）。電話はどちらが現行か要確認。
+  2. お支払い方法
+  SEO用の <title> は公開時に次へ差し替え:
+  「鉄板焼肉じゅうじゅう亭｜広島市佐伯区・五日市 ご飯が進む鉄板焼肉とテイクアウト」
+  公開先の <html> には lang="ja" を付けてください。
+-->
+
+<style>
+/* ==========================================================================
+   LOCAL DESIGN SYSTEM  「鉄板」
+   Concept: 鉄板の黒(iron)＋辛味噌の赤(primary)＋キャベツの緑(leaf)＋焼き色の橙(heat)
+   方針: デジタル庁デザインシステムの考え方に沿う
+     本文16px以上 / 行間1.5倍以上 / 文字4.5:1・境界線3:1 / 操作要素44px以上 /
+     フォーカスは二重リング / 色だけで意味を伝えない
+   ========================================================================== */
+:root {
+  color-scheme: light;
+
+  /* Color */
+  --c-iron:        #1B1917;   /* 暗い面（ヘッダー・ヒーロー・店舗情報） */
+  --c-iron-2:      #2B2724;   /* 暗い面の中のカード */
+  --c-paper:       #FAF5EC;   /* Background */
+  --c-surface:     #FFFFFF;   /* Surface */
+  --c-ink:         #1E1A17;   /* Text */
+  --c-muted:       #5B524A;   /* Muted Text（paper上 7.0:1） */
+  --c-line:        #D9CBB6;   /* Border（装飾） */
+  --c-line-strong: #8A7B68;   /* Border（操作要素 3.8:1） */
+  --c-primary:     #B42318;   /* Primary 辛味噌（白文字 6.6:1） */
+  --c-primary-ink: #FFFFFF;
+  --c-secondary:   #2F4F23;   /* Secondary キャベツ（paper文字 8.6:1） */
+  --c-secondary-soft: #E6EFDC;
+  --c-heat:        #FF8A3D;   /* 暗い面の上の強調（iron上 7.4:1） */
+  --c-on-dark:     #FAF5EC;
+  --c-on-dark-dim: #CFC6B8;   /* iron上 10:1 */
+  --c-tbc-bg:      #FFF1C2;
+  --c-tbc-ink:     #5C4400;   /* 8.2:1 */
+  --c-focus:       #FFD43B;
+
+  /* Type */
+  --ff-display: "Dela Gothic One", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  --ff-body: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  --fs-h1: clamp(2rem, 1.25rem + 3.8vw, 3.75rem);   /* 32 → 60px */
+  --fs-h2: clamp(1.625rem, 1.2rem + 1.9vw, 2.375rem); /* 26 → 38px */
+  --fs-h3: 1.25rem;     /* 20px */
+  --fs-h4: 1.125rem;    /* 18px */
+  --fs-h5: 1rem;        /* 16px bold */
+  --fs-h6: 0.875rem;    /* 14px bold（ラベル用） */
+  --fs-body: 1rem;      /* 16px */
+  --fs-small: 0.875rem; /* 14px（補足） */
+  --lh-body: 1.85;
+  --lh-head: 1.35;
+  --ls-body: 0.04em;
+  --ls-head: 0.02em;
+  --ls-label: 0.12em;
+
+  /* Space（4px基準） */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 72px;
+  --space-section: clamp(56px, 8vw, 104px);
+  --gutter: 16px;
+  --w-content: 1080px;
+  --w-read: 40rem;
+
+  /* Shape */
+  --r-card: 4px;
+  --r-ctl: 6px;
+  --r-pill: 999px;
+  --bw: 1px;
+  --bw-ctl: 2px;
+  --shadow-float: 0 -2px 12px rgba(27, 25, 23, .18);
+  --shadow-photo: 0 0 0 3px var(--c-heat), 0 16px 40px rgba(255, 138, 61, .30);
+  --btn-h: 52px;
+  --tap: 44px;
+  /* Breakpoints（CSS変数はmedia queryで使えないため値を固定）
+     Mobile  : 〜639px
+     Tablet  : 640px〜959px
+     Desktop : 960px〜  */
+}
+@media (min-width: 640px) { :root { --gutter: 24px; } }
+@media (min-width: 960px) { :root { --gutter: 32px; } }
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  background: var(--c-paper);
+  color: var(--c-ink);
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-body);
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+@media (max-width: 959px) { .site-footer { padding-bottom: calc(var(--s-6) + 68px + env(safe-area-inset-bottom, 0px)); } }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--c-iron); z-index: 60; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, h4, h5, h6 { margin: 0; line-height: var(--lh-head); letter-spacing: var(--ls-head); text-wrap: balance; }
+h1 { font-family: var(--ff-display); font-weight: 400; font-size: var(--fs-h1); }
+h2 { font-family: var(--ff-display); font-weight: 400; font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); font-weight: 700; }
+h4 { font-size: var(--fs-h4); font-weight: 700; }
+h5 { font-size: var(--fs-h5); font-weight: 700; }
+h6 { font-size: var(--fs-h6); font-weight: 700; letter-spacing: var(--ls-label); }
+p { margin: 0; }
+ul, ol, dl, dd { margin: 0; padding: 0; }
+li { list-style: none; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.25em; }
+:focus-visible { outline: 4px solid var(--c-focus); outline-offset: 2px; box-shadow: 0 0 0 2px var(--c-iron); }
+.skip { position: absolute; left: 8px; top: -80px; z-index: 100; background: var(--c-surface); color: var(--c-ink); padding: 12px 16px; border-radius: var(--r-ctl); }
+.skip:focus { top: calc(8px + env(safe-area-inset-top, 0px)); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Layout components ---------- */
+.container {
+  max-width: calc(var(--w-content) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+.band { padding-block: var(--space-section); }
+.band--paper   { background: var(--c-paper); }
+.band--surface { background: var(--c-surface); }
+.band--leaf    { background: var(--c-secondary); color: var(--c-on-dark); }
+.band--iron    { background: var(--c-iron); color: var(--c-on-dark); }
+.on-dark { --link-line: var(--c-on-dark-dim); }
+
+.sec-head { display: grid; gap: var(--s-3); max-width: var(--w-read); margin-bottom: var(--s-7); }
+.sec-head__lead { color: var(--c-muted); }
+.on-dark .sec-head__lead, .band--leaf .sec-head__lead { color: var(--c-on-dark-dim); }
+.eyebrow { font-size: var(--fs-h6); font-weight: 700; letter-spacing: var(--ls-label); color: var(--c-primary); }
+.on-dark .eyebrow { color: var(--c-heat); }
+.band--leaf .eyebrow { color: #FFB27A; } /* leaf上 5.3:1 */
+
+/* ---------- Button ---------- */
+.btn {
+  --btn-bg: var(--c-primary); --btn-fg: var(--c-primary-ink); --btn-line: var(--c-primary);
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--s-2);
+  min-height: var(--btn-h); padding: 0 var(--s-5);
+  background: var(--btn-bg); color: var(--btn-fg);
+  border: var(--bw-ctl) solid var(--btn-line); border-radius: var(--r-ctl);
+  font: inherit; font-weight: 700; letter-spacing: var(--ls-body); line-height: 1.3; text-align: center; text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { filter: brightness(1.08); }
+.btn--ghost { --btn-bg: transparent; --btn-fg: currentColor; --btn-line: currentColor; }
+.btn--ghost:hover { background: rgba(127, 127, 127, .14); filter: none; }
+.on-dark .btn:not(.btn--ghost), .band--leaf .btn:not(.btn--ghost) { --btn-bg: var(--c-heat); --btn-fg: var(--c-iron); --btn-line: var(--c-heat); }
+.btn__sub { font-weight: 500; font-size: var(--fs-small); }
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+
+/* ---------- Chip / TBC ---------- */
+.chip { display: inline-flex; align-items: center; min-height: 36px; padding: 0 var(--s-4); border: var(--bw) solid currentColor; border-radius: var(--r-pill); font-size: var(--fs-small); font-weight: 700; line-height: 1.3; }
+.tag { display: inline-block; padding: 0 var(--s-3); border-radius: var(--r-pill); background: var(--c-secondary-soft); color: var(--c-secondary); font-size: var(--fs-h6); font-weight: 700; letter-spacing: .06em; line-height: 1.9; }
+.tbc { display: inline-block; margin-left: var(--s-2); padding: 0 var(--s-2); border: var(--bw) dashed var(--c-tbc-ink); border-radius: var(--r-ctl); background: var(--c-tbc-bg); color: var(--c-tbc-ink); font-size: 0.75rem; font-weight: 700; letter-spacing: .04em; line-height: 1.7; vertical-align: 0.1em; white-space: nowrap; }
+
+/* ---------- Header ---------- */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--c-iron); color: var(--c-on-dark); border-bottom: var(--bw) solid var(--c-iron-2); }
+.site-header__in { display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); min-height: 60px; }
+.brand { display: grid; line-height: 1.2; text-decoration: none; white-space: nowrap; }
+.btn__num { display: none; }
+@media (min-width: 400px) { .btn__num { display: inline; } }
+.brand__kicker { font-size: 0.75rem; letter-spacing: var(--ls-label); color: var(--c-on-dark-dim); }
+.brand__name { font-family: var(--ff-display); font-size: 1.375rem; letter-spacing: .02em; }
+.gnav { display: none; }
+.gnav ul { display: flex; gap: var(--s-1); }
+.gnav a { display: inline-flex; align-items: center; min-height: var(--tap); padding: 0 var(--s-3); font-size: var(--fs-small); font-weight: 700; text-decoration: none; border-radius: var(--r-ctl); }
+.gnav a:hover { background: var(--c-iron-2); }
+.site-header .btn { --btn-h: 44px; padding: 0 var(--s-4); }
+@media (min-width: 960px) { .gnav { display: block; } }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--c-iron); color: var(--c-on-dark); padding-block: var(--s-7) var(--space-section); position: relative; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 55% at 78% 40%, rgba(255, 138, 61, .26), transparent 70%); pointer-events: none; }
+.hero__in { position: relative; display: grid; gap: var(--s-5); }
+.notice { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-3); align-items: baseline; padding: var(--s-3) var(--s-4); margin-top: var(--s-7); background: var(--c-iron-2); border-radius: var(--r-card); font-size: var(--fs-small); line-height: 1.7; color: var(--c-on-dark-dim); }
+.notice strong { color: var(--c-on-dark); }
+.hero__eyebrow { font-size: var(--fs-h6); font-weight: 700; letter-spacing: var(--ls-label); color: var(--c-heat); margin-bottom: var(--s-3); }
+.hero h1 em { font-style: normal; color: var(--c-heat); }
+.hero__lead { margin-top: var(--s-4); max-width: 30rem; color: var(--c-on-dark); }
+.hero__facts { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-5); }
+.hero .btn-row { margin-top: var(--s-5); }
+.hero__photo { justify-self: center; width: 100%; max-width: 520px; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-photo); }
+.hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
+@media (min-width: 960px) {
+  .hero__in { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); grid-template-areas: "top photo" "bottom photo"; column-gap: var(--s-7); row-gap: 0; }
+  .hero__top { grid-area: top; align-self: end; }
+  .hero__bottom { grid-area: bottom; align-self: start; }
+  .hero__photo { grid-area: photo; align-self: center; justify-self: end; aspect-ratio: 1; }
+  .hero__photo img { object-position: 50% 50%; }
+}
+
+/* ---------- Feature cards ---------- */
+.cards { display: grid; gap: var(--s-4); }
+@media (min-width: 960px) { .cards--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.card { display: grid; align-content: start; gap: var(--s-3); padding: var(--s-5); background: var(--c-surface); border: var(--bw) solid var(--c-line); border-radius: var(--r-card); }
+.card__label { color: var(--c-primary); }
+.card__quote { margin-top: var(--s-2); padding-top: var(--s-3); border-top: var(--bw) solid var(--c-line); font-weight: 500; }
+.card__src { display: block; margin-top: var(--s-1); font-size: var(--fs-small); color: var(--c-muted); font-weight: 400; }
+
+/* ---------- Meal photos ---------- */
+.meal { display: grid; gap: var(--s-5); }
+@media (min-width: 640px) { .meal { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .meal { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.meal figure { margin: 0; display: grid; gap: var(--s-3); align-content: start; }
+.meal img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; }
+.meal figcaption { font-size: var(--fs-small); color: var(--c-on-dark-dim); }
+.meal figcaption strong { display: block; margin-bottom: 2px; color: var(--c-on-dark); font-size: var(--fs-body); }
+
+/* ---------- How to eat ---------- */
+.diagram { margin: 0 0 var(--s-7); padding: var(--s-5); background: var(--c-paper); border: var(--bw) solid var(--c-line); border-radius: var(--r-card); }
+.diagram svg { display: block; width: 100%; max-width: 520px; height: auto; margin-inline: auto; }
+.diagram figcaption { margin-top: var(--s-3); font-size: var(--fs-small); color: var(--c-muted); text-align: center; }
+.dg-plate { fill: var(--c-iron); }
+.dg-wood { fill: #B98A57; }
+.dg-grain { stroke: #8F6638; stroke-width: 1.5; fill: none; }
+.dg-leaf { fill: #7FA75A; }
+.dg-meat { fill: #7A3E22; }
+.dg-sauce { fill: #C2352A; }
+.dg-ground { stroke: var(--c-line-strong); stroke-width: 2; }
+.dg-text { fill: var(--c-ink); font-size: 14px; font-weight: 700; font-family: var(--ff-body); }
+.dg-lead { stroke: var(--c-ink); stroke-width: 1.5; fill: none; }
+.steps { display: grid; gap: var(--s-4); counter-reset: step; }
+@media (min-width: 640px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.step { counter-increment: step; display: grid; align-content: start; gap: var(--s-2); padding: var(--s-5); border: var(--bw) solid var(--c-line); border-radius: var(--r-card); background: var(--c-paper); }
+.step::before { content: counter(step); font-family: var(--ff-display); font-size: 2.25rem; line-height: 1; color: var(--c-primary); }
+.step p { color: var(--c-muted); }
+.aside-note { margin-top: var(--s-5); max-width: var(--w-read); color: var(--c-muted); font-size: var(--fs-small); }
+.aside-note strong { color: var(--c-ink); }
+
+/* ---------- Menu ---------- */
+.menu-block + .menu-block { margin-top: var(--s-8); }
+.menu-block > h3 { margin-bottom: var(--s-4); display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4); }
+.menu-block > h3 small { font-size: var(--fs-small); font-weight: 400; color: var(--c-muted); }
+.split { display: grid; gap: var(--s-5); align-items: center; margin-bottom: var(--s-5); }
+@media (min-width: 640px) { .split { grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: var(--s-6); } }
+.split img { width: 100%; border-radius: var(--r-card); }
+.rules { display: grid; gap: var(--s-1); font-size: var(--fs-small); color: var(--c-muted); }
+.rules li::before { content: "※ "; }
+.sizes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-3); }
+@media (min-width: 640px) { .sizes { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.size { height: 100%; display: grid; align-content: start; gap: var(--s-1); padding: var(--s-4); background: var(--c-surface); border: var(--bw) solid var(--c-line); border-radius: var(--r-card); }
+.size__name { font-weight: 700; font-size: var(--fs-h4); }
+.size__price { font-family: var(--ff-display); font-size: 1.875rem; line-height: 1.2; font-variant-numeric: tabular-nums; color: var(--c-primary); }
+.size__price small { font-family: var(--ff-body); font-size: var(--fs-small); color: var(--c-ink); margin-left: 2px; }
+.size__note { font-size: var(--fs-small); color: var(--c-muted); line-height: 1.7; }
+.price-list { background: var(--c-surface); border: var(--bw) solid var(--c-line); border-radius: var(--r-card); }
+.price-list > div { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-4); padding: var(--s-3) var(--s-5); min-height: var(--tap); }
+.price-list > div + div { border-top: var(--bw) solid var(--c-line); }
+.price-list dt { font-weight: 500; }
+.price-list dt small { display: block; font-size: var(--fs-small); color: var(--c-muted); font-weight: 400; }
+.price-list dd { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.feature-row { display: grid; gap: var(--s-4); align-items: start; }
+@media (min-width: 960px) { .feature-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.callout { display: grid; gap: var(--s-2); padding: var(--s-5); border-radius: var(--r-card); background: var(--c-secondary-soft); color: var(--c-ink); }
+.callout__price { font-family: var(--ff-display); font-size: 2.25rem; line-height: 1.2; color: var(--c-secondary); font-variant-numeric: tabular-nums; }
+.callout__price small { font-family: var(--ff-body); font-size: var(--fs-body); color: var(--c-ink); margin-left: 4px; }
+.callout--plain { background: var(--c-surface); border: var(--bw) solid var(--c-line); }
+.callout--plain .callout__price { color: var(--c-primary); }
+.callout ul { display: grid; gap: var(--s-1); font-size: var(--fs-small); color: var(--c-muted); }
+.callout ul li::before { content: "・"; }
+
+/* ---------- Take-out (leaf band) ---------- */
+.takeout { display: grid; gap: var(--s-6); align-items: start; }
+@media (min-width: 960px) { .takeout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-7); } }
+.ticket { padding: var(--s-5); background: var(--c-paper); color: var(--c-ink); border-radius: var(--r-card); display: grid; gap: var(--s-2); }
+.ticket__price { font-family: var(--ff-display); font-size: 2.5rem; line-height: 1.2; color: var(--c-primary); font-variant-numeric: tabular-nums; }
+.ticket__price small { font-family: var(--ff-body); font-size: var(--fs-body); color: var(--c-ink); }
+.ticket .btn { --btn-bg: var(--c-primary); --btn-fg: var(--c-primary-ink); --btn-line: var(--c-primary); margin-top: var(--s-3); }
+.pull { padding-left: var(--s-4); border-left: 3px solid var(--c-heat); }
+.pull cite { display: block; margin-top: var(--s-2); font-style: normal; font-size: var(--fs-small); color: var(--c-on-dark-dim); }
+.takeout__body { display: grid; gap: var(--s-5); }
+
+/* ---------- Voices ---------- */
+.rating { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4); margin-bottom: var(--s-5); }
+.rating__score { font-family: var(--ff-display); font-size: 2.5rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.rating__meta { color: var(--c-muted); font-size: var(--fs-small); }
+.voices { display: grid; gap: var(--s-4); }
+@media (min-width: 640px) { .voices { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 960px) { .voices { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.voice { margin: 0; display: grid; align-content: start; gap: var(--s-3); padding: var(--s-5); background: var(--c-paper); border: var(--bw) solid var(--c-line); border-radius: var(--r-card); }
+.voice blockquote { margin: 0; }
+.voice__src { font-size: var(--fs-small); color: var(--c-muted); }
+.aside-note.center { margin-inline: 0; }
+
+/* ---------- FAQ ---------- */
+.faq { display: grid; gap: var(--s-3); max-width: 52rem; }
+.faq details { background: var(--c-surface); border: var(--bw-ctl) solid var(--c-line-strong); border-radius: var(--r-card); }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); min-height: 56px; padding: var(--s-3) var(--s-5); font-weight: 700; cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "＋"; font-weight: 400; font-size: 1.25rem; flex: none; }
+.faq details[open] summary::after { content: "－"; }
+.faq__a { padding: 0 var(--s-5) var(--s-5); color: var(--c-ink); }
+.faq__a p + p { margin-top: var(--s-2); }
+
+/* ---------- Info ---------- */
+.info { display: grid; gap: var(--s-6); }
+@media (min-width: 960px) { .info { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--s-7); align-items: start; } }
+.info-list { background: var(--c-iron-2); border-radius: var(--r-card); }
+.info-list > div { display: grid; gap: var(--s-1); padding: var(--s-4) var(--s-5); }
+.info-list > div + div { border-top: var(--bw) solid #413B36; }
+.info-list dt { font-size: var(--fs-h6); font-weight: 700; letter-spacing: var(--ls-label); color: var(--c-on-dark-dim); }
+.info-list dd { color: var(--c-on-dark); }
+@media (min-width: 640px) { .info-list > div { grid-template-columns: 9rem minmax(0, 1fr); gap: var(--s-4); } }
+.info-list a { color: var(--c-heat); }
+.tel { font-family: var(--ff-display); font-size: 1.75rem; letter-spacing: .04em; line-height: 1.3; }
+.closing { display: grid; gap: var(--s-4); align-content: start; }
+.closing h2 { font-size: clamp(1.5rem, 1.1rem + 1.7vw, 2.125rem); }
+.closing p { color: var(--c-on-dark-dim); }
+.site-footer { background: #121110; color: var(--c-on-dark-dim); padding-block: var(--s-6); font-size: var(--fs-small); }
+.site-footer p + p { margin-top: var(--s-2); }
+
+/* ---------- Mobile / tablet bottom bar ---------- */
+.dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 55; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--s-1); padding: var(--s-2) max(var(--s-2), env(safe-area-inset-right, 0px)) calc(var(--s-2) + env(safe-area-inset-bottom, 0px)) max(var(--s-2), env(safe-area-inset-left, 0px)); background: var(--c-iron); box-shadow: var(--shadow-float); }
+.dock a { display: grid; place-items: center; align-content: center; gap: 2px; min-height: 52px; border-radius: var(--r-ctl); color: var(--c-on-dark); font-size: 0.75rem; font-weight: 700; text-decoration: none; letter-spacing: .02em; }
+.dock a svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.dock a.dock__call { background: var(--c-heat); color: var(--c-iron); }
+@media (min-width: 960px) { .dock { display: none; } }
+@media (forced-colors: active) { .btn, .chip, .card, .step, .size { border: 1px solid CanvasText; } }
+</style>
+
+<div lang="ja">
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="site-header">
+  <div class="container site-header__in">
+    <a class="brand" href="#top" aria-label="鉄板焼肉じゅうじゅう亭 トップへ">
+      <span class="brand__kicker">鉄板焼肉</span>
+      <span class="brand__name">じゅうじゅう亭</span>
+    </a>
+    <nav class="gnav" aria-label="ページ内メニュー">
+      <ul>
+        <li><a href="#how">食べ方</a></li>
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#takeout">持ち帰り</a></li>
+        <li><a href="#voices">口コミ</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#info">店舗情報</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:08091253165" aria-label="電話する 080-9125-3165">電話<span class="btn__num">　080-9125-3165</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ================= FIRST VIEW ================= -->
+  <section class="hero" id="top" aria-labelledby="h1">
+    <div class="container">
+      <div class="hero__in">
+        <div class="hero__top">
+          <p class="hero__eyebrow">広島市佐伯区・五日市　鉄板焼肉</p>
+          <h1 id="h1">ご飯が進む、<br><em>熱々</em>の鉄板焼肉。</h1>
+          <p class="hero__lead">じゅうじゅう鳴る鉄板で、お肉とキャベツを熱いまま。辛味噌を溶かして、ご飯にのせて食べる店です。</p>
+        </div>
+        <div class="hero__photo">
+          <img src="img/hero.jpg" width="1000" height="969" alt="湯気の上がる鉄板いっぱいのキャベツとお肉。奥にご飯と味噌汁、鉄板を傾ける木の板が見える">
+        </div>
+        <div class="hero__bottom">
+          <ul class="hero__facts" aria-label="ポイント">
+            <li class="chip">ご飯食べ放題（セット250円）</li>
+            <li class="chip">焼肉1枚 900円〜</li>
+            <li class="chip">店内でも、持ち帰りでも</li>
+          </ul>
+          <div class="btn-row on-dark">
+            <a class="btn" href="tel:08091253165">電話で注文・問い合わせ</a>
+            <a class="btn btn--ghost" href="#menu">メニューと値段を見る</a>
+          </div>
+        </div>
+      </div>
+      <p class="notice"><strong>お知らせ</strong><span>2026年10月10日（土）にリニューアルオープンしました。定休日は月曜日です。</span></p>
+    </div>
+  </section>
+
+  <!-- ================= WHY (口コミ根拠の3点) ================= -->
+  <section class="band band--paper" aria-labelledby="why">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow">口コミより</p>
+        <h2 id="why">食べた人が何度も書いている、3つのこと</h2>
+        <p class="sec-head__lead">Googleマップに寄せられた口コミ34件から、繰り返し出てくる言葉を選びました。</p>
+      </div>
+      <div class="cards cards--3">
+        <article class="card">
+          <h6 class="card__label">熱さ</h6>
+          <h3>鉄板のまま、最後まで熱い</h3>
+          <p>油がじゅうじゅう鳴る状態で運ばれてきます。猫舌で、ふうふう冷ましながら食べた、という口コミもあります。</p>
+          <p class="card__quote">「鉄板だと熱々のまま最後まで食べられる」<span class="card__src">口コミより</span></p>
+        </article>
+        <article class="card">
+          <h6 class="card__label">辛味噌</h6>
+          <h3>食べている途中で、味が変わる</h3>
+          <p>お肉とキャベツと一緒に、赤い辛味噌が届きます。鉄板にたまった肉汁に溶かして、くぐらせて食べます。</p>
+          <p class="card__quote">「もう病みつきの美味しさでした」<span class="card__src">口コミより</span></p>
+        </article>
+        <article class="card">
+          <h6 class="card__label">ご飯</h6>
+          <h3>濃いめの味で、ご飯が進む</h3>
+          <p>口コミに何度も出てくる言葉が「ご飯が進む」です。ご飯セット（ご飯・味噌汁・漬物）は250円で、ご飯は食べ放題。ランチもディナーも同じです。おかわりはセルフサービスです。</p>
+          <p class="card__quote">「ご飯がよく進みとても美味しかったです」<span class="card__src">口コミより</span></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MEAL (写真) ================= -->
+  <section class="band band--iron on-dark" aria-labelledby="meal-h">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow">届くもの</p>
+        <h2 id="meal-h">鉄板に、ご飯セットを付けると</h2>
+        <p class="sec-head__lead">焼肉の鉄板に、ご飯・味噌汁・漬物のセット（250円）を付けた様子です。</p>
+      </div>
+      <div class="meal">
+        <figure>
+          <img src="img/meal-set.jpg" width="900" height="849" loading="lazy" style="object-position:50% 65%" alt="鉄板いっぱいのキャベツとお肉、手前に漬物をのせたご飯と味噌汁">
+          <figcaption><strong>鉄板焼肉とご飯の定食</strong>湯気が上がる状態で、鉄板・ご飯・味噌汁が並びます。</figcaption>
+        </figure>
+        <figure>
+          <img src="img/meal-rice.jpg" width="900" height="653" loading="lazy" alt="黄色い漬物をのせたご飯と、木の台にのった鉄板のキャベツとお肉">
+          <figcaption><strong>ご飯には漬物がのります</strong>左上に見えるのが、鉄板を傾けるときの木の板です。</figcaption>
+        </figure>
+        <figure>
+          <img src="img/meal-plate.jpg" width="900" height="661" loading="lazy" style="object-position:50% 40%" alt="鉄板に盛られた、焼き色のついたキャベツと角切りのお肉のアップ">
+          <figcaption><strong>キャベツがたっぷり</strong>口コミでも「キャベツが多い」という声があります。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW TO EAT =================
+  <section class="band band--surface" id="how" aria-labelledby="how-h">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow">初めての方へ</p>
+        <h2 id="how-h">初めてなら、この順番で</h2>
+        <p class="sec-head__lead">口コミで紹介されている食べ方です。席の木の板で鉄板を傾けて、汁に辛味噌を溶かします。</p>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 360 170" role="img" aria-labelledby="dg-t dg-d">
+          <title id="dg-t">鉄板を傾ける様子</title>
+          <desc id="dg-d">鉄板の左側の下に木の板を入れて傾けると、肉汁とキャベツの水分が右側にたまり、そこに辛味噌を溶かす。</desc>
+          <line class="dg-ground" x1="8" y1="132" x2="352" y2="132"/>
+          <polygon class="dg-wood" points="30,132 98,132 98,102 30,93.5"/>
+          <path class="dg-grain" d="M40 124 H90 M40 116 H90 M40 108 H90"/>
+          <g transform="translate(36 94) rotate(7)">
+            <rect class="dg-plate" x="0" y="-9" width="280" height="9" rx="4"/>
+            <rect class="dg-plate" x="0" y="-22" width="8" height="22" rx="3"/>
+            <rect class="dg-plate" x="272" y="-22" width="8" height="22" rx="3"/>
+            <ellipse class="dg-leaf" cx="30" cy="-16" rx="16" ry="8"/>
+            <ellipse class="dg-leaf" cx="62" cy="-15" rx="15" ry="7"/>
+            <ellipse class="dg-leaf" cx="96" cy="-16" rx="16" ry="8"/>
+            <ellipse class="dg-meat" cx="46" cy="-22" rx="10" ry="6"/>
+            <ellipse class="dg-meat" cx="80" cy="-22" rx="10" ry="6"/>
+            <ellipse class="dg-meat" cx="112" cy="-23" rx="9" ry="5"/>
+            <ellipse class="dg-sauce" cx="236" cy="-11" rx="34" ry="4.5"/>
+          </g>
+          <text class="dg-text" x="30" y="152">木の板</text>
+          <path class="dg-lead" d="M52 138 V128"/>
+          <text class="dg-text" x="196" y="62">肉汁＋辛味噌</text>
+          <path class="dg-lead" d="M262 68 L270 102"/>
+        </svg>
+        <figcaption>鉄板を傾けると、肉汁とキャベツの水分が低い側にたまります。</figcaption>
+      </figure>
+
+      <ol class="steps">
+        <li class="step"><h4>まず、そのまま食べる</h4><p>鉄板が届いたら、辛味噌を入れる前に、お肉とキャベツを少し食べます。</p></li>
+        <li class="step"><h4>鉄板を傾ける</h4><p>席にある木の板を鉄板の片側の下に入れます。肉汁とキャベツの水分が反対側にたまります。</p></li>
+        <li class="step"><h4>辛味噌を溶かす</h4><p>たまった汁に、添えられた赤い辛味噌をすくって溶かします。</p></li>
+        <li class="step"><h4>くぐらせて、ご飯へ</h4><p>お肉とキャベツを汁にくぐらせて、ご飯の上にのせて食べます。</p></li>
+      </ol>
+      <p class="aside-note"><strong>辛味噌なしでも食べられます。</strong>口コミには「辛味噌を溶かさなくても、十分に美味しかった」という声もあります。</p>
+    </div>
+  </section>
+
+  <!-- ================= MENU ================= -->
+  <section class="band band--paper" id="menu" aria-labelledby="menu-h">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow">メニュー</p>
+        <h2 id="menu-h">メニューと値段</h2>
+        <p class="sec-head__lead">価格はすべて税込です。焼肉は1枚が1人前。ご飯と味噌汁は別になります。</p>
+      </div>
+
+      <div class="menu-block">
+        <h3>焼肉<small>キャベツと一緒に鉄板で</small></h3>
+        <div class="split">
+          <img src="img/plate2.jpg" width="288" height="177" alt="黒い鉄板に盛られた、角切りの焼肉とキャベツ">
+          <ul class="rules">
+            <li>1枚＝1人前です</li>
+            <li>ご飯と味噌汁はつきません（下のご飯セットをご注文ください）</li>
+            <li>ニンニク抜きも出来ます</li>
+            <li>お一人様ワンオーダー制です</li>
+            <li>食べ残しはご遠慮ください</li>
+          </ul>
+        </div>
+        <ul class="sizes">
+          <li><div class="size"><p class="size__name">1枚</p><p class="size__price">900<small>円</small></p><p class="size__note">1人前。メニュー表は「女性におすすめ」。口コミに「1枚にして丁度良い量だった」。</p></div></li>
+          <li><div class="size"><p class="size__name">1.5枚</p><p class="size__price">1,150<small>円</small></p><p class="size__note">1.5人前。メニュー表は「男性に人気」。口コミに「焼肉と最初のご飯でお腹いっぱい」。</p></div></li>
+          <li><div class="size"><p class="size__name">2枚</p><p class="size__price">1,350<small>円</small></p><p class="size__note">2人前。</p></div></li>
+          <li><div class="size"><p class="size__name">3枚</p><p class="size__price">1,550<small>円</small></p><p class="size__note">3人前。</p></div></li>
+        </ul>
+      </div>
+
+      <div class="menu-block">
+        <h3>ご飯と、足すもの</h3>
+        <div class="feature-row">
+          <div class="callout">
+            <h4>ご飯セット（ご飯・味噌汁・漬物）</h4>
+            <p class="callout__price">250<small>円・ご飯は食べ放題</small></p>
+            <ul>
+              <li>ランチもディナーも、全時間帯で食べ放題</li>
+              <li>おかわりはセルフサービス</li>
+            </ul>
+          </div>
+          <dl class="price-list">
+            <div><dt>キムチ</dt><dd>300円</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="menu-block">
+        <h3>ドリンク</h3>
+        <dl class="price-list">
+          <div><dt>ハイボール</dt><dd>550円</dd></div>
+          <div><dt>缶ビール</dt><dd>500円</dd></div>
+          <div><dt>ソフトドリンク<small>烏龍茶／コーラ／カルピスウォーター／りんごジュース</small></dt><dd>350円</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TAKE-OUT ================= -->
+  <section class="band band--leaf" id="takeout" aria-labelledby="to-h">
+    <div class="container takeout">
+      <div class="takeout__body">
+        <div class="sec-head" style="margin-bottom:0">
+          <p class="eyebrow">テイクアウト</p>
+          <h2 id="to-h">持ち帰りは、<span style="white-space:nowrap">3人前</span>のセットで</h2>
+          <p class="sec-head__lead">注文は電話で受け付けています。口コミでは、持ち帰りで大人4人が「ぺろっと」食べたという声があります。</p>
+        </div>
+        <blockquote class="pull" style="margin:0">
+          <p>期待以上に美味しくて、豚肉とキャベツでシンプルなのにやみつきになりました！</p>
+          <cite>テイクアウトで利用した方の口コミより</cite>
+        </blockquote>
+      </div>
+      <div class="ticket">
+        <h3>得々セット（3人前）</h3>
+        <p class="ticket__price">1,350<small>円（税込）＋容器代50円</small></p>
+        <p>テイクアウト専用メニューです。人数が多いときは、セットを増やしてご注文ください。</p>
+        <a class="btn" href="tel:08091253165">電話で注文する　080-9125-3165</a>
+        <p class="aside-note" style="margin-top:var(--s-2)">鉄板のまま、熱いうちに食べたい方は店内で。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VOICES ================= -->
+  <section class="band band--surface" id="voices" aria-labelledby="v-h">
+    <div class="container">
+      <div class="sec-head" style="margin-bottom:var(--s-5)">
+        <p class="eyebrow">口コミ</p>
+        <h2 id="v-h">食べた人の言葉</h2>
+      </div>
+      <p class="rating"><span class="rating__score">3.9</span><span class="rating__meta">Googleマップ ／ 34件（リニューアル前の投稿を含みます）</span></p>
+      <div class="voices">
+        <figure class="voice"><span class="tag">ご飯が進む</span><blockquote><p>とにかくご飯が進むキャベツとお肉！男が好きな味って感じです</p></blockquote><figcaption class="voice__src">店内で食べた方</figcaption></figure>
+        <figure class="voice"><span class="tag">量</span><blockquote><p>ボリューム思ったよりあってご飯お代わりするつもりが焼肉と最初のご飯でお腹いっぱい。</p></blockquote><figcaption class="voice__src">ランチで1.5枚を頼んだ方</figcaption></figure>
+        <figure class="voice"><span class="tag">持ち帰り</span><blockquote><p>初めてで量も分からなかったので大人4人で得々セットを注文しましたが、ぺろっと食べられたので次回は多めに注文します！</p></blockquote><figcaption class="voice__src">テイクアウトした方</figcaption></figure>
+        <figure class="voice"><span class="tag">福岡で食べていた人</span><blockquote><p>福岡でよく食べていたのでついつい行ってしまいました。とてもおいしかったです！</p></blockquote><figcaption class="voice__src">夕食で来店した方</figcaption></figure>
+        <figure class="voice"><span class="tag">辛味噌なしでも</span><blockquote><p>キャベツが多く、塩分がきいて大変美味しかったです。辛味噌を溶かさなくても、十分に美味しかった。</p></blockquote><figcaption class="voice__src">店内で食べた方</figcaption></figure>
+        <figure class="voice"><span class="tag">お肉・味噌汁</span><blockquote><p>ボリューム満点！！お肉も柔らかくて美味しかった。味噌汁も家庭的な味で</p></blockquote><figcaption class="voice__src">店内で食べた方</figcaption></figure>
+      </div>
+      <p class="aside-note">Googleマップの口コミから抜粋しました。味つけは濃いめで、「塩気が強い」と感じた方もいます。ご飯と一緒に食べると食べやすい、という声が多くあります。</p>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="band band--paper" id="faq" aria-labelledby="faq-h">
+    <div class="container">
+      <div class="sec-head">
+        <p class="eyebrow">ご来店前に</p>
+        <h2 id="faq-h">よくある質問</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>量はどれくらいですか？</summary>
+          <div class="faq__a"><p>焼肉は1枚が1人前です。メニュー表では1枚が「女性におすすめ」です。口コミには「1枚で丁度良い量だった」「1.5枚で、焼肉と最初のご飯でお腹いっぱい」という声があります。ご飯セットは別料金です。</p></div>
+        </details>
+        <details>
+          <summary>ご飯のおかわりはできますか？</summary>
+          <div class="faq__a"><p>ご飯セット（ご飯・味噌汁・漬物）は250円で、ご飯は食べ放題です。ランチもディナーも同じで、おかわりはセルフサービスです。</p></div>
+        </details>
+        <details>
+          <summary>ニンニク抜きにできますか？</summary>
+          <div class="faq__a"><p>出来ます。ご注文のときにお伝えください。</p></div>
+        </details>
+        <details>
+          <summary>注文のルールはありますか？</summary>
+          <div class="faq__a"><p>お一人様ワンオーダー制です。食べ残しはご遠慮ください。</p></div>
+        </details>
+        <details>
+          <summary>料理が出るまで時間がかかりますか？</summary>
+          <div class="faq__a"><p>ご注文をいただいてから、2名様分ずつ焼き上げています。そのため、お時間をいただきます。時間に余裕がない日は、電話で注文して持ち帰る方法もあります。</p></div>
+        </details>
+        <details>
+          <summary>味は濃いですか？</summary>
+          <div class="faq__a"><p>口コミでは、濃い味つけでご飯が進むという声が多くあります。一方で、塩気が強いと感じた方もいます。ご飯と合わせて食べるか、辛味噌を使わずにまず食べてみてください。</p></div>
+        </details>
+        <details>
+          <summary>駐車場はありますか？</summary>
+          <div class="faq__a"><p>6台分あります（公式Instagramより）。</p></div>
+        </details>
+        <details>
+          <summary>子ども連れでも行けますか？</summary>
+          <div class="faq__a"><p>こども椅子とカトラリーを用意しています（公式Instagramより）。</p></div>
+        </details>
+        <details>
+          <summary>テイクアウトはできますか？</summary>
+          <div class="faq__a"><p>できます。テイクアウト専用の得々セット（3人前）が1,350円、容器代が別に50円です。ご注文は電話（080-9125-3165）で受け付けています。</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INFO + CLOSING ================= -->
+  <section class="band band--iron on-dark" id="info" aria-labelledby="info-h">
+    <div class="container info">
+      <div>
+        <div class="sec-head" style="margin-bottom:var(--s-5)">
+          <p class="eyebrow">店舗情報</p>
+          <h2 id="info-h">鉄板焼肉じゅうじゅう亭</h2>
+        </div>
+        <dl class="info-list">
+          <div><dt>住所</dt><dd>広島市佐伯区五日市町大字石内6626-1</dd></div>
+          <div><dt>電話</dt><dd><a class="tel" href="tel:08091253165">080-9125-3165</a></dd></div>
+          <div><dt>営業時間</dt><dd>11:00〜15:00／17:00〜21:00<br><span style="color:var(--c-on-dark-dim)">ラストオーダー 14:30／20:30</span></dd></div>
+          <div><dt>定休日</dt><dd>月曜日</dd></div>
+          <div><dt>駐車場</dt><dd>6台</dd></div>
+          <div><dt>お子様連れ</dt><dd>こども椅子・カトラリーあり</dd></div>
+          <div><dt>価格帯</dt><dd>1人 1,000〜2,000円（Googleマップの表示）</dd></div>
+          <div><dt>ご利用</dt><dd>店内でのお食事／テイクアウト</dd></div>
+          <div><dt>お支払い</dt><dd><span class="tbc" style="margin-left:0">確認中</span></dd></div>
+          <div><dt>お店の紹介</dt><dd>本場博多の味（公式Instagramより）</dd></div>
+          <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/jujutei/" target="_blank" rel="noopener">@jujutei</a></dd></div>
+        </dl>
+      </div>
+      <div class="closing">
+        <h2>注文は、電話ひとつで。</h2>
+        <p>持ち帰りの得々セットも、お店での注文のご相談も、電話で受け付けています。</p>
+        <div class="btn-row">
+          <a class="btn" href="tel:08091253165">電話する　080-9125-3165</a>
+          <a class="btn btn--ghost" href="https://maps.app.goo.gl/gxcEpva2B8Lj9okg9" target="_blank" rel="noopener">Googleマップで見る</a>
+        </div>
+        <p class="aside-note" style="color:var(--c-on-dark-dim);margin-top:0">定休日は月曜日です。ラストオーダーはランチ14:30、夜20:30です。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 鉄板焼肉じゅうじゅう亭</p>
+    <p>掲載の価格・営業時間は、公式Instagram（2026年10月）に基づく税込表示です。口コミは、Googleマップの投稿からの抜粋です。</p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="かんたんメニュー">
+  <a class="dock__call" href="tel:08091253165"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>電話する</a>
+  <a href="#menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14M5 12h14M5 19h9"/></svg>メニュー</a>
+  <a href="#voices"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>口コミ</a>
+  <a href="#info"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>店舗情報</a>
+</nav>
+</div>
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Restaurant", "name": "鉄板焼肉じゅうじゅう亭", "telephone": "+81-80-9125-3165", "servesCuisine": ["焼肉", "鉄板焼"], "priceRange": "¥1,000〜¥2,000", "address": {"@type": "PostalAddress", "addressCountry": "JP", "addressRegion": "広島県", "addressLocality": "広島市佐伯区", "streetAddress": "五日市町大字石内6626-1"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "11:00", "closes": "15:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "17:00", "closes": "21:00"}], "hasMap": "https://maps.app.goo.gl/gxcEpva2B8Lj9okg9", "sameAs": ["https://www.instagram.com/jujutei/"]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "量はどれくらいですか？", "acceptedAnswer": {"@type": "Answer", "text": "焼肉は1枚が1人前です。メニュー表では1枚が「女性におすすめ」です。口コミには「1枚で丁度良い量だった」「1.5枚で、焼肉と最初のご飯でお腹いっぱい」という声があります。ご飯セットは別料金です。"}}, {"@type": "Question", "name": "ご飯のおかわりはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "ご飯セット（ご飯・味噌汁・漬物）は250円で、ご飯は食べ放題です。ランチもディナーも同じで、おかわりはセルフサービスです。"}}, {"@type": "Question", "name": "ニンニク抜きにできますか？", "acceptedAnswer": {"@type": "Answer", "text": "出来ます。ご注文のときにお伝えください。"}}, {"@type": "Question", "name": "注文のルールはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "お一人様ワンオーダー制です。食べ残しはご遠慮ください。"}}, {"@type": "Question", "name": "料理が出るまで時間がかかりますか？", "acceptedAnswer": {"@type": "Answer", "text": "ご注文をいただいてから、2名様分ずつ焼き上げています。そのため、お時間をいただきます。時間に余裕がない日は、電話で注文して持ち帰る方法もあります。"}}, {"@type": "Question", "name": "味は濃いですか？", "acceptedAnswer": {"@type": "Answer", "text": "口コミでは、濃い味つけでご飯が進むという声が多くあります。一方で、塩気が強いと感じた方もいます。ご飯と合わせて食べるか、辛味噌を使わずにまず食べてみてください。"}}, {"@type": "Question", "name": "駐車場はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "6台分あります（公式Instagramより）。"}}, {"@type": "Question", "name": "子ども連れでも行けますか？", "acceptedAnswer": {"@type": "Answer", "text": "こども椅子とカトラリーを用意しています（公式Instagramより）。"}}, {"@type": "Question", "name": "テイクアウトはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。テイクアウト専用の得々セット（3人前）が1,350円、容器代が別に50円です。ご注文は電話（080-9125-3165）で受け付けています。"}}]}
+</script>
+
+</body></html>
